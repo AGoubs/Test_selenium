@@ -5,7 +5,7 @@ const faker = require("faker/locale/fr");
     const driver = await new Builder().forBrowser('chrome').build();
     await driver.get('http://localhost/Cours_AUROUSSEAU/quali/');
 
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < 1000; i++) {
         await search(driver, { "product": faker.fake('{{commerce.product}}'), "quantity": faker.fake('{{random.number({"min":1, "max":20})}}'), "price": faker.fake('{{commerce.price}}') });
     }
 })()
