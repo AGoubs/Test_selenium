@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+                <h1>Ajout d'un produit</h1>
+            </div>
+        </div>
+        <form action="#" id="form" method="POST">
+            <div class="row mt-5">
+                <div class="col-4">
+                    <input class="form-control" type="text" id="product" placeholder="Produit">
+                </div>
+
+                <div class="col-3">
+                    <input class="form-control" type="text" id="quantity" placeholder="Quantité">
+                </div>
+                <div class="col-3">
+                    <input class="form-control" type="text" id="price" placeholder="Prix">
+                </div>
+                <div class="col-2">
+                    <button type="submit" id="submitButton" class="btn btn-primary">Ajouter</button>
+                </div>
+
+            </div>
+        </form>
+        <div class="row mt-5">
+            <div class="col-12">
+                <div id='main'>
+                    <table id="example" class="table table-bordered table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Item</th>
+                                <th>Quantité</th>
+                                <th>Prix HT / u</th>
+                                <th>Total HT</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <strong>Total HT : </strong><span id="total_ht"></span> 
+        <br>
+        <strong>Total TTC : </strong><span id="tva"></span> 
+
+    </div>
+
+</body>
+
+</html>
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
+<script src='js/order.js'></script>
